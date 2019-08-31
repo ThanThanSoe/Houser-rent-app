@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_human"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/home_image" />
+
+            <SearchView
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/search"
+                android:queryHint="which location you search"
+                android:background="@drawable/bg_buttom2"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_back"
+                android:src="@drawable/ic_chevron_left"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"/>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_gravity="center"
+                android:layout_width="370dp"
+                android:layout_height="290dp"
+                card_view:cardCornerRadius="20dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="20dp"
+                app:strokeWidth="2dp">
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_amount"
+                        android:text="$ 12,0000"
+                        android:textSize="25sp"
+                        android:textColor="#0A020D"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/img_image2"
+                        android:layout_toEndOf="@+id/tv_amount"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_near_me_black_24dp"/>
+
+                    <ImageView
+                        android:id="@+id/img_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_amount"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/location" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_location_name"
+                        android:text="West minster, London"
+                        android:layout_toEndOf="@+id/img_location"
+                        android:layout_below="@+id/tv_amount"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <ImageView
+                        android:id="@+id/img_favourite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_favorite"
+                        android:layout_below="@+id/img_area"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_favourite"
+                        android:text="324 favorites"
+                        android:layout_toEndOf="@+id/img_favourite"
+                        android:layout_below="@+id/tv_area"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <ImageView android:id="@+id/img_bedroom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bed"
+                        android:layout_below="@+id/img_location"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/tv_area"
+                        android:layout_marginLeft="100dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_bedroom"
+                        android:text="4 bedrooms"
+                        android:layout_toEndOf="@+id/img_bedroom"
+                        android:layout_below="@+id/tv_location_name"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <ImageView
+                        android:id="@+id/img_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_open"
+                        android:layout_below="@+id/img_location"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_area"
+                        android:text="3200 sqft"
+                        android:layout_toEndOf="@+id/img_area"
+                        android:layout_below="@+id/tv_location_name"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <ImageView android:id="@+id/img_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_create"
+                        android:layout_below="@+id/img_bedroom"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/tv_favourite"
+                        android:layout_marginLeft="100dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_review"
+                        android:text="23 Reviews"
+                        android:layout_toEndOf="@+id/img_bedroom"
+                        android:layout_below="@+id/tv_bedroom"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:id="@+id/img_line"
+                        android:layout_below="@+id/img_favourite"
+                        android:src="@drawable/line_shape"
+                        android:layout_marginTop="25dp"/>
+
+
+                    <TextView
+                        android:id="@+id/btn_see_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_below="@+id/img_line"
+                        android:textSize="15sp"
+                        android:text="See Review" />
+
+                    <Button
+                        android:id="@+id/btn_see_photos"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_butttom"
+                        android:layout_below="@+id/img_line"
+                        android:layout_marginTop="25dp"
+                        android:layout_toEndOf="@+id/btn_see_review"
+                        android:layout_marginLeft="50dp"
+                        android:text="See Photos"
+                        android:textColor="#A03CBF"/>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_content"
+                android:text="Single Family House"
+                android:layout_below="@+id/card_view"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_detail_content"
+                android:text="@string/house_details"
+                android:layout_below="@+id/tv_content"/>
+
+            <Button
+                android:id="@+id/btn_add_favourite"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_butttom"
+                android:layout_marginTop="650dp"
+                android:layout_marginLeft="20dp"
+                android:text="See Review" />
+
+            <Button
+                android:id="@+id/btn_book_now"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_butttom"
+                android:layout_marginTop="650dp"
+                android:layout_toEndOf="@+id/btn_add_favourite"
+                android:layout_marginLeft="50dp"
+                android:backgroundTint="#A03CBF"
+                android:text="Books Now" />
+
+        </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

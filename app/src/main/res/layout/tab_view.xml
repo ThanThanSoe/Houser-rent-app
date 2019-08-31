@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.TabViewActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:paddingTop="@dimen/margin_medium_3"
+       >
+
+        <SearchView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/search"
+            android:queryHint="which location you search"
+            android:background="@drawable/bg_buttom2"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/equal"
+            android:src="@drawable/ic_equal"
+            android:layout_toEndOf="@+id/search"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/equal1"
+            android:src="@drawable/ic_pause"
+            android:layout_toEndOf="@+id/equal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/third_image"
+            android:src="@drawable/ic_new_releases"
+            android:layout_toEndOf="@+id/equal1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"/>
+
+
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:fitsSystemWindows="true"
+            android:id="@+id/tablayout"
+            android:layout_below="@+id/search"/>
+
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablayout"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    </RelativeLayout>
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />-->
+    <LinearLayout
+        android:id="@+id/llRequirements"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/margin_large"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_medium_2"
+        android:paddingRight="@dimen/margin_medium_2"
+        android:weightSum="4"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary">
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp">
+            ​
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivRequirementOne"
+                android:layout_width="@dimen/margin_medium_3"
+                android:layout_height="@dimen/margin_medium_3"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/movie" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivRequirementOne"
+                android:layout_centerHorizontal="true"
+                android:text="Talks"
+                android:textSize="@dimen/text_regular"
+                android:textColor="#FFFFFF"/>
+            ​
+        </RelativeLayout>
+        ​
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp">
+            ​
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivRequirementTwo"
+                android:layout_width="@dimen/margin_medium_3"
+                android:layout_height="@dimen/margin_medium_3"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/search2"
+                android:layout_marginLeft="30dp"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivRequirementTwo"
+                android:layout_centerHorizontal="true"
+                android:text="Discover"
+                android:textSize="@dimen/text_regular"
+                android:textColor="#FFFFFF"/>
+            ​
+            ​
+            ​
+        </RelativeLayout>
+        ​
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp">
+            ​
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivRequirementThree"
+                android:layout_width="@dimen/margin_medium_3"
+                android:layout_height="@dimen/margin_medium_3"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/headphone"
+                android:layout_marginLeft="30dp"/>
+            ​ <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivRequirementThree"
+            android:layout_centerHorizontal="true"
+            android:text="Podcasts"
+            android:textSize="@dimen/text_regular"
+            android:textColor="#FFFFFF" />
+            ​
+        </RelativeLayout>
+        ​
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp">
+            ​
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivRequirementFour"
+                android:layout_width="@dimen/margin_medium_3"
+                android:layout_height="@dimen/margin_medium_3"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/man"
+                android:layout_marginLeft="30dp"/>
+            ​
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivRequirementFour"
+                android:layout_centerHorizontal="true"
+                android:text="My TED"
+                android:textSize="@dimen/text_regular"
+                android:textColor="#FFFFFF" />
+
+            ​
+        </RelativeLayout>
+        ​
+    </LinearLayout>
+    ​
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
